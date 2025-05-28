@@ -34,6 +34,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        exclude: /bootstrap\.min\.css$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -42,6 +43,18 @@ module.exports = {
             },
           },
           "css-loader",
+        ],
+      },
+      {
+        test: /bootstrap\.min\.css$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          },
+          "rtlcss-loader",
         ],
       },
       {
