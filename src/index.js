@@ -10,9 +10,14 @@ import "@fortawesome/fontawesome-free/js/all.min";
 //   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 // );
 //summary 4 above beneath
-document
-  .querySelectorAll('[data-bs-toggle="tooltip"]')
-  .forEach((item) => new bootstrap.Tooltip(item));
+
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((item) => new bootstrap.Tooltip(item));
 
 console.log("hello world");
 console.log("My name is Ammar");
+
+document.querySelectorAll(".add-to-cart-btn").forEach((item) => {
+  item.addEventListener("click", () => {
+    alert("أضيف المنتج إلى عربة الشراء");
+  });
+});
